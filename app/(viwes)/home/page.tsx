@@ -1,3 +1,9 @@
+import OfferSection from '@/components/_organisms/home/OfferSection';
+
 export default function page() {
-  return <div></div>;
+  return (
+    <div>
+      <OfferSection />
+    </div>
+  );
 }
