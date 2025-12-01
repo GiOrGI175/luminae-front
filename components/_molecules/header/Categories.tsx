@@ -108,7 +108,7 @@ export default function Categories() {
       {open && (
         <div
           ref={menuRef}
-          className='translate-x-5 max-w-[1067px] w-full grid grid-cols-[repeat(5,145px)]
+          className='xl:translate-x-5 max-w-[1067px] w-full grid grid-cols-[repeat(4,145px)]  xl:grid-cols-[repeat(5,145px)]
  grid-rows-2 gap-10 p-6 bg-white rounded-lg shadow'
         >
           {womenMenu.map((col) => (
@@ -134,7 +134,7 @@ export default function Categories() {
               ))}
             </div>
           ))}
-          <div className='row-start-1 row-end-3 col-start-5 col-end-5 w-[278px] h-[340px] relative border rounded-xl'>
+          <div className='max-xl:hidden block row-start-1 row-end-3 col-start-5 col-end-5 w-[278px] h-[340px] relative border rounded-xl'>
             <Image src='/img/women.png' fill alt='women img' />
           </div>
         </div>

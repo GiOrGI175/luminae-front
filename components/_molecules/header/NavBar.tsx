@@ -28,7 +28,7 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className='w-full flex justify-between'>
+    <nav className='w-full max-md:hidden flex justify-between'>
       <div className='max-w-[420px] w-full flex justify-between items-center'>
         {navLinks.map((item) => (
           <Link
