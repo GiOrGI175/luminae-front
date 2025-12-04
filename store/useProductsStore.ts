@@ -19,16 +19,31 @@ export interface trendingItem {
   image: string;
 }
 
+export interface TopItem {
+  id: number;
+  brand: string;
+  title: string;
+  price: number;
+  oldPrice: number;
+  discount: string;
+  rating: number;
+  reviews: number;
+  image: string;
+}
+
 interface ProductsState {
   FleshSales: FlashSaleItem[];
   Trending: trendingItem[];
+  Top100: TopItem[];
   fetchFleshSales: () => Promise<void>;
   fetchTranding: () => Promise<void>;
+  fetchTops: () => Promise<void>;
 }
 
 export const useProductsStore = create<ProductsState>((set, get) => ({
   FleshSales: [],
   Trending: [],
+  Top100: [],
 
   fetchFleshSales: async () => {
     try {
@@ -63,6 +78,26 @@ export const useProductsStore = create<ProductsState>((set, get) => ({
       const data = await res.json();
 
       set({ Trending: data[0].trending });
+
+      if (!res.ok) throw new Error('Failed to fetch');
+    } catch (error) {
+      console.error('fetch error:', error);
+    }
+  },
+
+  fetchTops: async () => {
+    try {
+      const res = await fetch(
+        'https://6734d2605995834c8a90ffac.mockapi.io/flashSales',
+        {
+          method: 'GET',
+          headers: { 'Content-Type': 'application/json' },
+        }
+      );
+
+      const data = await res.json();
+
+      set({ Top100: data[0].top100 });
 
       if (!res.ok) throw new Error('Failed to fetch');
     } catch (error) {
