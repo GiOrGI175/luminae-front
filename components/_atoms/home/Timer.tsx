@@ -1,8 +1,13 @@
 import { useCountdown } from '@/hooks/useCountdown';
+import Image from 'next/image';
 import React from 'react';
 
-export default function Timer() {
-  const { hours, minutes, seconds } = useCountdown(item.dealEndTime);
+type Props = {
+  dealEndTime: string;
+};
+
+export default function Timer({ dealEndTime }: Props) {
+  const { hours, minutes, seconds } = useCountdown(dealEndTime);
 
   return (
     <div>
