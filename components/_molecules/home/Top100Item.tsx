@@ -9,9 +9,17 @@ type Props = {
 
 export default function Top100Item({ item }: Props) {
   return (
-    <div className='max-w-[300px] w-full h-[480px] flex flex-col shadow-xl'>
-      <div className='relative max-w-[300px] w-full h-[327px]'>
-        <Image src={item.image} fill alt='img' className='object-cover' />
+    <div
+      className='max-xl:max-w-full basis-[300px]  max-xl:grow
+        max-xl:shrink max-xl:min-w-[200px] max-w-[300px] w-full h-[480px] flex flex-col shadow-xl'
+    >
+      <div className='relative max-xl:max-w-full max-w-[300px] w-full h-[327px]'>
+        <Image
+          src={item.image}
+          fill
+          alt='img'
+          className='object-cover max-xl:object-top'
+        />
       </div>
       <div className='w-full flex flex-col items-center p-5'>
         <div className='w-full flex flex-col'>

@@ -35,7 +35,7 @@ export default function FlashSales() {
               />
             </button>
           </div>
-          <div className='pt-12 w-full flex justify-between'>
+          <div className='pt-12 w-full flex max-xl:justify-center gap-5 justify-between max-xl:flex-wrap'>
             {flashSales.map((item) => (
               <FlashSalesItem key={item.id} item={item} />
             ))}

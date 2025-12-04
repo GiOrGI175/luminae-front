@@ -31,7 +31,7 @@ export default function Top100() {
               />
             </button>
           </div>
-          <div className='pt-12 w-full flex justify-between'>
+          <div className='pt-12 w-full flex max-xl:justify-center gap-5 justify-between max-xl:flex-wrap'>
             {Top100.map((item) => (
               <Top100Item key={item.id} item={item} />
             ))}

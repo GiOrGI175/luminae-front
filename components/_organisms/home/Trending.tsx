@@ -33,7 +33,7 @@ export default function Trending() {
               />
             </button>
           </div>
-          <div className='pt-12 w-full flex justify-between'>
+          <div className='pt-12 w-full flex max-xl:gap-5 max-xl:flex-col justify-between'>
             {Trending.map((item) => (
               <TrendingItem key={item.id} item={item} />
             ))}

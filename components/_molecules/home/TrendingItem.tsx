@@ -9,9 +9,14 @@ type Props = {
 
 export default function TrendingItem({ item }: Props) {
   return (
-    <div className='max-w-[406px] w-full h-[437px] bg-[#262626] rounded-[10px] overflow-hidden'>
+    <div className='max-xl:max-w-full  max-w-[406px] w-full h-[437px] bg-[#262626] rounded-[10px] overflow-hidden'>
       <div className='relative w-full h-[344px]'>
-        <Image src={item.image} fill className='object-cover' alt='img' />
+        <Image
+          src={item.image}
+          fill
+          className='object-cover object-top'
+          alt='img'
+        />
       </div>
       <div className='w-full h-[93px] px-5 flex justify-between items-center'>
         <div className='flex flex-col'>

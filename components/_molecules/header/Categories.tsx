@@ -93,7 +93,7 @@ export default function Categories() {
   }, [open]);
 
   return (
-    <div className='w-full flex flex-col mt-[45px] '>
+    <div className='relative w-full flex flex-col mt-[45px] '>
       <div className='w-full h-[52px]   flex justify-between '>
         {categories.map((item) => (
           <span
@@ -108,13 +108,13 @@ export default function Categories() {
       {open && (
         <div
           ref={menuRef}
-          className='xl:translate-x-5 max-w-[1067px] w-full grid grid-cols-[repeat(4,145px)]  xl:grid-cols-[repeat(5,145px)]
+          className='absolute top-[50px]  z-50 xl:translate-x-5 max-w-[1067px] w-full grid grid-cols-[repeat(4,145px)]  xl:grid-cols-[repeat(5,145px)]
  grid-rows-2 gap-10 p-6 bg-white rounded-lg shadow'
         >
           {womenMenu.map((col) => (
             <div
               key={col.title}
-              className={`' w-[145px] flex flex-col gap-2 ${
+              className={`w-[145px] flex flex-col gap-2 ${
                 col.title === 'CLOTHES'
                   ? ' row-start-1 row-end-3 col-start-4 col-end-4'
                   : ''
