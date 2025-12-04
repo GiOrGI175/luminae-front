@@ -1,6 +1,7 @@
 'use client';
 
 import FlashSalesItem from '@/components/_molecules/home/FlashSalesItem';
+import SalesSwiper from '@/components/_molecules/home/salesSwiper/SalesSwiper';
 import { useProductsStore } from '@/store/useProductsStore';
 import Image from 'next/image';
 import { useEffect } from 'react';
@@ -35,10 +36,13 @@ export default function FlashSales() {
               />
             </button>
           </div>
-          <div className='pt-12 w-full flex max-xl:justify-center gap-5 justify-between max-xl:flex-wrap'>
+          <div className='max-md:hidden pt-12 w-full flex max-xl:justify-center gap-5 justify-between max-xl:flex-wrap'>
             {flashSales.map((item) => (
               <FlashSalesItem key={item.id} item={item} />
             ))}
+          </div>
+          <div className='md:hidden'>
+            <SalesSwiper />
           </div>
         </div>
       </div>

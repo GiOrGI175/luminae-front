@@ -1,6 +1,7 @@
 'use client';
 
 import TrendingItem from '@/components/_molecules/home/TrendingItem';
+import TrandingSwiper from '@/components/_molecules/home/trendingSwiper/TrandingSwiper';
 import { useProductsStore } from '@/store/useProductsStore';
 import Image from 'next/image';
 import { useEffect } from 'react';
@@ -33,10 +34,13 @@ export default function Trending() {
               />
             </button>
           </div>
-          <div className='pt-12 w-full flex max-xl:gap-5 max-xl:flex-col justify-between'>
+          <div className='max-md:hidden pt-12 w-full flex max-xl:gap-5 max-xl:flex-col justify-between'>
             {Trending.map((item) => (
               <TrendingItem key={item.id} item={item} />
             ))}
+          </div>
+          <div className='md:hidden'>
+            <TrandingSwiper />
           </div>
         </div>
       </div>
