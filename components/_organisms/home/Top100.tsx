@@ -1,6 +1,7 @@
 'use client';
 
 import Top100Item from '@/components/_molecules/home/Top100Item';
+import TopSwiper from '@/components/_molecules/home/topSwiper/TopSwiper';
 import { useProductsStore } from '@/store/useProductsStore';
 import Image from 'next/image';
 import { useEffect } from 'react';
@@ -31,10 +32,13 @@ export default function Top100() {
               />
             </button>
           </div>
-          <div className='pt-12 w-full flex max-xl:justify-center gap-5 justify-between max-xl:flex-wrap'>
+          <div className='max-md:hidden pt-12 w-full flex max-xl:justify-center gap-5 justify-between max-xl:flex-wrap'>
             {Top100.map((item) => (
               <Top100Item key={item.id} item={item} />
             ))}
+          </div>
+          <div className='md:hidden'>
+            <TopSwiper />
           </div>
         </div>
       </div>
