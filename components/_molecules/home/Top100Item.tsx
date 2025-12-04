@@ -34,7 +34,7 @@ export default function Top100Item({ item }: Props) {
             </div>
             <div>
               <Image
-                src='/svg/heart.svg'
+                src='/svg/Vector.svg'
                 width={20}
                 height={18}
                 alt='favorite'
