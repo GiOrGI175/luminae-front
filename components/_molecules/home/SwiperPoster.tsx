@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function SwiperPoster() {
   return (
-    <div className='w-full h-[221px] flex justify-center  bg-[#F7DDD0]'>
+    <div className='w-full h-[221px] flex justify-center  bg-[#F7DDD0] px-5 my-[68px]'>
       <div className='max-w-[1260px]  w-full h-full flex justify-between items-center'>
         <div>
           <Image src='/svg/left.svg' width={32} height={32} alt='left' />
