@@ -12,10 +12,10 @@ export default function page() {
       <section className='w-full flex justify-center'>
         <div className='max-w-[1440px] w-full flex  justify-center px-5'>
           <div className='max-w-[1260px] w-full flex'>
-            <div className='max-sm:hidden max-w-[315px] w-full pt-9 border '>
+            <div className='max-sm:hidden max-w-[315px] w-full pt-9'>
               <Filter />
             </div>
-            <div className='max-w-[945px] w-full  border '>
+            <div className='max-w-[945px] w-full'>
               <Products />
             </div>
           </div>
