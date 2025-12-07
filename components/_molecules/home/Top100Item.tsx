@@ -11,7 +11,7 @@ export default function Top100Item({ item }: Props) {
   return (
     <div
       className='max-xl:max-w-full basis-[300px]  max-xl:grow
-        max-xl:shrink max-xl:min-w-[200px] max-w-[300px] w-full h-[480px] flex flex-col shadow-xl'
+        max-xl:shrink max-xl:min-w-[200px] max-w-[300px] w-full h-[480px] rounded-2xl overflow-hidden flex flex-col shadow-xl '
     >
       <div className='relative max-xl:max-w-full max-w-[300px] w-full h-[327px]'>
         <Image
