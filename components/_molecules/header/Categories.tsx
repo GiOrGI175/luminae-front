@@ -1,9 +1,14 @@
 'use client';
 
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Categories() {
+  const pathname = usePathname();
+
+  if (pathname !== '/home') return null;
+
   const categories = [
     { title: 'Women', value: 'Women' },
     { title: 'Male', value: 'Male' },
