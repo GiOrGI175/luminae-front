@@ -2,6 +2,7 @@
 
 import { useProductsStore } from '@/store/useProductsStore';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect } from 'react';
 
 export default function Products() {
@@ -15,7 +16,8 @@ export default function Products() {
   return (
     <div className='w-full flex flex-wrap justify-center gap-5'>
       {Products.map((item) => (
-        <div
+        <Link
+          href={`products/${item.id}`}
           key={item.id}
           className='max-lg:max-w-[455px] max-w-[288px] w-full h-[480px] flex flex-col shadow-xl rounded-xl overflow-hidden'
         >
@@ -66,7 +68,7 @@ export default function Products() {
               </span>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
